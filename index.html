@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LokerKita.id - Eksplorasi Karir & Lowongan Kerja Modern</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              DEFAULT: '#4f46e5', // Indigo 600
+              dark: '#3730a3',    // Indigo 800
+              light: '#eef2ff',   // Indigo 50
+            },
+            accent: {
+              DEFAULT: '#f43f5e', // Rose 500
+              hover: '#e11d48',   // Rose 600
+            },
+            navy: '#0b1120'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <!-- STICKY NAVBAR -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#beranda" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-primary to-violet-600 flex items-center justify-center text-white shadow-lg shadow-indigo-500/25 group-hover:rotate-3 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <div>
+          <span class="text-xl font-extrabold tracking-tight text-slate-900">Loker<span class="text-primary">Kita</span></span>
+          <span class="block text-[10px] font-bold tracking-widest text-slate-400 uppercase">Career & Talent Hub</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="#beranda" class="text-primary font-bold">Beranda</a>
+        <a href="#lowongan" class="hover:text-primary transition">Eksplorasi Loker</a>
+        <a href="#keunggulan" class="hover:text-primary transition">Keunggulan</a>
+        <a href="#testimoni" class="hover:text-primary transition">Cerita Sukses</a>
+        <a href="#kontak" class="hover:text-primary transition">Kontak</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <button onclick="openTrackModal()" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 px-4 py-2.5 rounded-xl transition cursor-pointer">
+          🎫 Cek Tiket Lamaran
+        </button>
+        <button onclick="openApplyModal(1)" class="bg-accent hover:bg-accent-hover text-white text-sm font-bold px-5 py-2.5 rounded-xl shadow-md shadow-rose-500/20 flex items-center gap-2 transition cursor-pointer">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+          </svg>
+          Lamar Cepat
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="beranda" class="relative bg-navy text-white overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1920&q=80" alt="Suasana Kerja Modern" class="w-full h-full object-cover opacity-35" />
+      <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 to-indigo-950/50"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24 md:pt-24 md:pb-28">
+      <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/15 px-4 py-1.5 rounded-full text-xs font-semibold text-indigo-200 mb-6">
+        <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+        Hiring Sprint 2026 — Proses Seleksi Langsung dengan HRD Resmi
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight max-w-3xl tracking-tight">
+        Raih Karir Terbaikmu di
+        <span class="text-indigo-400">Perusahaan Impian</span>
+        <span class="text-rose-400">Masa Depan</span>
+      </h1>
+
+      <p class="mt-5 text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+        Temukan ribuan peluang kerja terkurasi di seluruh Indonesia maupun remote global dengan transparansi gaji dan tiket lamaran instan.
+      </p>
+
+      <!-- Trust Metrics -->
+      <div class="mt-7 flex flex-wrap items-center gap-6 text-sm font-semibold text-slate-200">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-indigo-400"></span>
+          850+ Perusahaan Mitra
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-indigo-400"></span>
+          18.500+ Kandidat Diterima
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-rose-400"></span>
+          Respon HRD &lt; 48 Jam
+        </div>
+      </div>
+
+      <!-- FLOATING SEARCH BAR -->
+      <div class="mt-10 bg-white rounded-2xl p-4 sm:p-5 shadow-2xl text-slate-800 max-w-5xl">
+        <form onsubmit="handleHeroSearch(event)" class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
+          <div class="md:col-span-4">
+            <label class="block text-[11px] font-bold uppercase tracking-wider text-primary mb-1.5">
+              🔍 Posisi atau Skill
+            </label>
+            <input id="searchKeyword" type="text" placeholder="Contoh: Cyber, Laravel, Admin..." class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary" />
+          </div>
+
+          <div class="md:col-span-3">
+            <label class="block text-[11px] font-bold uppercase tracking-wider text-primary mb-1.5">
+              📍 Kota / Penempatan
+            </label>
+            <select id="searchLocation" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary">
+              <option value="Semua">Semua Lokasi</option>
+              <option value="Medan">Medan</option>
+              <option value="Jakarta">Jakarta</option>
+              <option value="Bandung">Bandung</option>
+              <option value="Remote">Remote (WFA)</option>
+            </select>
+          </div>
+
+          <div class="md:col-span-3">
+            <label class="block text-[11px] font-bold uppercase tracking-wider text-primary mb-1.5">
+              💼 Sistem Kerja
+            </label>
+            <select id="searchType" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary">
+              <option value="Semua">Semua Sistem</option>
+              <option value="Full-Time">Full-Time</option>
+              <option value="Remote">Remote</option>
+              <option value="Magang">Magang</option>
+            </select>
+          </div>
+
+          <div class="md:col-span-2">
+            <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-bold text-sm py-3 px-4 rounded-xl shadow-md shadow-indigo-600/25 transition cursor-pointer">
+              Cari Loker
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOWONGAN POPULER SECTION -->
+  <section id="lowongan" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+      <div>
+        <span class="inline-block text-xs font-extrabold uppercase tracking-wider text-primary bg-primary-light px-3 py-1 rounded-full mb-3">
+          Peluang Terkurasi
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Lowongan Kerja Populer</h2>
+        <p class="mt-2 text-slate-500 max-w-xl text-sm sm:text-base">
+          Klik tombol <strong>Lamar Sekarang</strong> pada posisi pilihanmu untuk mengisi formulir instan dan mendapatkan tiket lamaran.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap gap-2">
+        <button data-cat="Semua" class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-primary text-white shadow-sm transition cursor-pointer">Semua</button>
+        <button data-cat="IT & Software" class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-600 border border-slate-200 hover:border-primary transition cursor-pointer">IT & Software</button>
+        <button data-cat="Cybersecurity" class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-600 border border-slate-200 hover:border-primary transition cursor-pointer">Cybersecurity</button>
+        <button data-cat="Administrasi" class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-600 border border-slate-200 hover:border-primary transition cursor-pointer">Administrasi</button>
+        <button data-cat="Remote" class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-600 border border-slate-200 hover:border-primary transition cursor-pointer">Remote</button>
+      </div>
+    </div>
+
+    <div id="jobGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7"></div>
+
+    <div id="emptyState" class="hidden text-center py-16 bg-white rounded-3xl border border-slate-100">
+      <p class="text-lg font-bold text-slate-800">Lowongan tidak ditemukan.</p>
+      <p class="text-sm text-slate-500 mt-1">Coba kata kunci atau lokasi lain.</p>
+      <button onclick="resetFilters()" class="mt-4 px-5 py-2.5 bg-primary text-white text-xs font-bold rounded-xl cursor-pointer">Reset Filter</button>
+    </div>
+  </section>
+
+  <!-- KEUNGGULAN SECTION -->
+  <section id="keunggulan" class="py-20 bg-white border-y border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="inline-block text-xs font-extrabold uppercase tracking-wider text-accent bg-rose-50 px-3 py-1 rounded-full mb-3">
+          Kenapa LokerKita?
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Melamar Kerja Lebih Terukur & Transparan
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-slate-50 p-7 rounded-3xl border border-slate-100">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-100 text-primary flex items-center justify-center text-xl mb-5">🛡️</div>
+          <h3 class="text-lg font-bold text-slate-900">100% Terverifikasi</h3>
+          <p class="mt-2 text-sm text-slate-500 leading-relaxed">Bebas lowongan fiktif. Seluruh mitra perusahaan telah lolos verifikasi legalitas resmi.</p>
+        </div>
+
+        <div class="bg-slate-50 p-7 rounded-3xl border border-slate-100">
+          <div class="w-12 h-12 rounded-2xl bg-rose-100 text-accent flex items-center justify-center text-xl mb-5">💰</div>
+          <h3 class="text-lg font-bold text-slate-900">Estimasi Take-Home Pay</h3>
+          <p class="mt-2 text-sm text-slate-500 leading-relaxed">Simulasi gaji pokok dan tunjangan langsung terlihat saat kamu mengisi formulir lamaran.</p>
+        </div>
+
+        <div class="bg-slate-50 p-7 rounded-3xl border border-slate-100">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl mb-5">🎫</div>
+          <h3 class="text-lg font-bold text-slate-900">Tiket Tracking Instan</h3>
+          <p class="mt-2 text-sm text-slate-500 leading-relaxed">Setiap lamaran menghasilkan kode tiket unik yang bisa dicek statusnya kapan saja.</p>
+        </div>
+
+        <div class="bg-slate-50 p-7 rounded-3xl border border-slate-100">
+          <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl mb-5">⚡</div>
+          <h3 class="text-lg font-bold text-slate-900">Notifikasi WhatsApp</h3>
+          <p class="mt-2 text-sm text-slate-500 leading-relaxed">Undangan psikotes dan wawancara user dikirim langsung ke nomor WhatsApp aktifmu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONI SECTION -->
+  <section id="testimoni" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <span class="inline-block text-xs font-extrabold uppercase tracking-wider text-primary bg-primary-light px-3 py-1 rounded-full mb-3">
+        Cerita Kandidat
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+        Mereka Sudah Menemukan Karirnya
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+      <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+        <div class="text-amber-400 text-sm mb-4">★★★★★</div>
+        <p class="text-sm text-slate-600 italic leading-relaxed">
+          "Suka banget sama fitur tiket lamarannya! Setelah submit langsung keluar kode registrasi dan estimasi gaji bersihnya. Besoknya langsung dihubungi HRD lewat WhatsApp."
+        </p>
+        <div class="mt-6 flex items-center gap-3.5">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Alya" class="w-11 h-11 rounded-full object-cover" />
+          <div>
+            <h4 class="text-sm font-bold text-slate-900">Alya Ramadhani</h4>
+            <p class="text-xs text-slate-500">SOC Analyst • Jakarta</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+        <div class="text-amber-400 text-sm mb-4">★★★★★</div>
+        <p class="text-sm text-slate-600 italic leading-relaxed">
+          "Proses melamarnya nggak bertele-tele. Tinggal pilih posisi, tentukan tanggal siap mulai kerja, dan lampirkan link CV. Sangat membantu fresh graduate!"
+        </p>
+        <div class="mt-6 flex items-center gap-3.5">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Dimas" class="w-11 h-11 rounded-full object-cover" />
+          <div>
+            <h4 class="text-sm font-bold text-slate-900">Dimas Saputra</h4>
+            <p class="text-xs text-slate-500">Frontend Engineer • Remote</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+        <div class="text-amber-400 text-sm mb-4">★★★★★</div>
+        <p class="text-sm text-slate-600 italic leading-relaxed">
+          "Dapat posisi Front Office & Admin di Medan dalam waktu kurang dari seminggu. Informasinya jujur, transparan, dan tanpa pungutan biaya apa pun."
+        </p>
+        <div class="mt-6 flex items-center gap-3.5">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Nabila" class="w-11 h-11 rounded-full object-cover" />
+          <div>
+            <h4 class="text-sm font-bold text-slate-900">Nabila Syahputri</h4>
+            <p class="text-xs text-slate-500">Admin & Receptionist • Medan</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="kontak" class="bg-navy text-slate-300 pt-16 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-slate-800">
+        <div>
+          <span class="text-xl font-extrabold text-white">Loker<span class="text-indigo-400">Kita</span>.id</span>
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+            Platform akselerasi karir digital yang mempertemukan talenta terbaik Nusantara dengan perusahaan terpercaya.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-sm mb-3">Kontak Support</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li>📍 Jl. Imam Bonjol No. 45, Medan</li>
+            <li>📞 +62 812-9876-5432</li>
+            <li>✉️ karir@lokerkita.id</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-sm mb-3">Lacak Lamaran</h4>
+          <p class="text-sm text-slate-400 mb-3">Sudah pernah melamar? Cek status tiket lamaranmu di sini.</p>
+          <button onclick="openTrackModal()" class="bg-primary hover:bg-primary-dark text-white text-xs font-bold px-5 py-3 rounded-xl transition cursor-pointer">
+            Buka Pelacak Tiket
+          </button>
+        </div>
+      </div>
+      <p class="pt-8 text-center text-xs text-slate-500">© 2026 LokerKita.id — Dibangun untuk Kemudahan Pencari Kerja Indonesia.</p>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL INTERAKTIF 2-TAHAP (DENGAN TOMBOL PANAH KEMBALI & ANTI-TERPOTONG)-->
+  <!-- ===================================================================== -->
+  <div id="applyModal" onclick="if(event.target === this) closeApplyModal()" class="fixed inset-0 z-50 hidden bg-slate-950/65 backdrop-blur-sm flex items-start sm:items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl my-auto">
+      
+      <!-- Modal Colored Header (Sticky agar tombol panah kembali selalu terlihat) -->
+      <div class="sticky top-0 z-10 bg-gradient-to-r from-primary to-violet-600 px-5 py-4 text-white flex items-center gap-3 shadow-md">
+        <!-- Tombol Panah Kembali -->
+        <button type="button" onclick="closeApplyModal()" title="Kembali ke Daftar Lowongan" class="w-9 h-9 rounded-xl bg-white/15 hover:bg-white/25 flex items-center justify-center text-white transition cursor-pointer shrink-0">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+        </button>
+
+        <div class="flex-1 min-w-0">
+          <h3 id="modalHeaderTitle" class="text-base sm:text-lg font-extrabold truncate">Formulir Lamaran Instan</h3>
+          <p id="modalHeaderSubtitle" class="text-[11px] text-indigo-100 truncate">Klik panah kiri untuk kembali memilih loker</p>
+        </div>
+      </div>
+
+      <!-- STEP 1: FORM INPUT -->
+      <form id="applicationFormStep" onsubmit="handleApplicationSubmit(event)" class="p-5 sm:p-6 space-y-3.5">
+        <!-- Dropdown Pilih Lowongan -->
+        <div>
+          <label class="block text-[11px] font-extrabold uppercase tracking-wider text-slate-600 mb-1">
+            Pilih Posisi Lowongan
+          </label>
+          <select id="modalJobSelect" onchange="updateSalarySummary()" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-primary">
+          </select>
+        </div>
+
+        <!-- Grid 2 Kolom: Tanggal Siap Kerja & Pengalaman -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          <div>
+            <label class="block text-[11px] font-extrabold uppercase tracking-wider text-slate-600 mb-1">
+              Tanggal Siap Mulai
+            </label>
+            <input id="modalStartDate" type="date" required class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-primary" />
+          </div>
+          <div>
+            <label class="block text-[11px] font-extrabold uppercase tracking-wider text-slate-600 mb-1">
+              Pengalaman (Tahun)
+            </label>
+            <input id="modalExperience" type="number" min="0" max="30" value="1" oninput="updateSalarySummary()" required class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-primary" />
+          </div>
+        </div>
+
+        <!-- Nama Lengkap -->
+        <div>
+          <label class="block text-[11px] font-extrabold uppercase tracking-wider text-slate-600 mb-1">
+            Nama Lengkap Pelamar
+          </label>
+          <input id="modalApplicantName" type="text" required placeholder="Masukkan nama lengkap Anda" class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-primary" />
+        </div>
+
+        <!-- Nomor WhatsApp Aktif -->
+        <div>
+          <label class="block text-[11px] font-extrabold uppercase tracking-wider text-slate-600 mb-1">
+            Nomor WhatsApp Aktif
+          </label>
+          <input id="modalWhatsapp" type="tel" required placeholder="Contoh: 081234567890" class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-primary" />
+        </div>
+
+        <!-- Link CV / Portfolio -->
+        <div>
+          <label class="block text-[11px] font-extrabold uppercase tracking-wider text-slate-600 mb-1">
+            Link CV / Portfolio / LinkedIn
+          </label>
+          <input id="modalPortfolio" type="url" required placeholder="https://drive.google.com/... atau linkedin.com/in/..." class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-primary" />
+        </div>
+
+        <!-- Kotak Kalkulasi Kompensasi Otomatis -->
+        <div class="bg-indigo-50/80 border border-indigo-100 rounded-2xl p-3.5 space-y-1">
+          <div class="flex justify-between text-xs text-slate-600">
+            <span>Gaji Pokok Dasar:</span>
+            <span id="summaryBaseSalary" class="font-semibold text-slate-800">Rp 0</span>
+          </div>
+          <div class="flex justify-between text-xs text-slate-600">
+            <span>Bonus Pengalaman (<span id="summaryExpYears">1</span> Thn):</span>
+            <span id="summaryExpBonus" class="font-semibold text-emerald-600">+ Rp 0</span>
+          </div>
+          <div class="pt-1.5 border-t border-indigo-200/60 flex items-center justify-between">
+            <span class="text-xs font-extrabold text-slate-800">Estimasi Take-Home Pay:</span>
+            <span id="summaryTotalSalary" class="text-base font-extrabold text-primary">Rp 0</span>
+          </div>
+        </div>
+
+        <!-- Action Buttons: Kembali & Kirim -->
+        <div class="flex items-center gap-3 pt-1">
+          <button type="button" onclick="closeApplyModal()" class="px-4 py-3 rounded-xl text-xs font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition cursor-pointer shrink-0">
+            ← Kembali
+          </button>
+          <button type="submit" class="w-full bg-accent hover:bg-accent-hover text-white font-extrabold text-sm py-3 rounded-xl shadow-lg shadow-rose-500/25 transition cursor-pointer">
+            Konfirmasi & Kirim Lamaran
+          </button>
+        </div>
+      </form>
+
+      <!-- STEP 2: KONFIRMASI BERHASIL (RECEIPT VIEW) -->
+      <div id="applicationSuccessStep" class="hidden p-6 sm:p-7 text-center">
+        <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto text-3xl font-bold shadow-inner">
+          ✓
+        </div>
+
+        <h4 class="text-2xl font-extrabold text-slate-900 mt-4">Lamaran Berhasil Terkirim!</h4>
+        <p class="text-sm text-slate-500 mt-1.5">
+          Terima kasih <strong id="receiptName" class="text-slate-800">Kandidat</strong>! Berkas lamaran Anda telah masuk ke sistem rekrutmen kami.
+        </p>
+
+        <div class="mt-5 bg-slate-50 border border-slate-200/80 rounded-2xl p-4 text-left space-y-2.5 text-xs">
+          <div class="flex justify-between items-center">
+            <span class="text-slate-500">Kode Tiket Lamaran:</span>
+            <span id="receiptCode" class="font-extrabold text-primary bg-indigo-50 px-2.5 py-1 rounded-lg tracking-wider">LK-00000</span>
+          </div>
+          <div class="flex justify-between items-start gap-4">
+            <span class="text-slate-500 shrink-0">Posisi Dilamar:</span>
+            <span id="receiptJob" class="font-bold text-slate-800 text-right">-</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-slate-500">Siap Mulai Kerja:</span>
+            <span id="receiptDate" class="font-bold text-slate-800">-</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-slate-500">Estimasi Gaji:</span>
+            <span id="receiptSalary" class="font-extrabold text-accent">-</span>
+          </div>
+        </div>
+
+        <p class="mt-4 text-[11px] text-slate-400 leading-relaxed">
+          Tim HRD perusahaan terkait akan menghubungi WhatsApp Anda (<span id="receiptWa" class="font-semibold text-slate-600"></span>) maksimal dalam 2x24 jam kerja.
+        </p>
+
+        <button onclick="closeApplyModal()" class="mt-5 w-full bg-primary hover:bg-primary-dark text-white font-extrabold text-sm py-3.5 rounded-xl shadow-md transition cursor-pointer">
+          Selesai & Kembali ke Beranda
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CEK TIKET LAMARAN -->
+  <div id="trackModal" onclick="if(event.target === this) this.classList.add('hidden')" class="fixed inset-0 z-50 hidden bg-slate-950/65 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-7 shadow-2xl relative">
+      <button onclick="document.getElementById('trackModal').classList.add('hidden')" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 text-xs font-bold cursor-pointer">✕</button>
+      <span class="text-xs font-extrabold uppercase tracking-wider text-primary">Pelacak Status</span>
+      <h3 class="text-xl font-extrabold text-slate-900 mt-1">Riwayat Lamaran Saya</h3>
+      <p class="text-xs text-slate-500 mt-1">Daftar lamaran yang baru saja kamu kirim di perangkat ini:</p>
+      <div id="savedTicketsList" class="mt-4 space-y-3 max-h-72 overflow-y-auto"></div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const jobsData = [
+      {
+        id: 1,
+        title: "Junior Cybersecurity Analyst (SOC)",
+        company: "PT Perisai Siber Indonesia",
+        location: "Jakarta",
+        type: "Full-Time",
+        category: "Cybersecurity",
+        posted: "Baru Hari Ini",
+        rating: "4.9",
+        reviews: 142,
+        baseSalary: 7500000,
+        image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+        summary: "Monitoring alert keamanan jaringan 24/7, analisis log SIEM, dan penanganan awal insiden siber."
+      },
+      {
+        id: 2,
+        title: "Full-Stack Web Developer (Laravel & React)",
+        company: "Nusantara Cloud Digital",
+        location: "Remote",
+        type: "Remote",
+        category: "IT & Software",
+        posted: "1 Hari Lalu",
+        rating: "4.9",
+        reviews: 210,
+        baseSalary: 9000000,
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+        summary: "Membangun aplikasi web SaaS modern, integrasi REST API, dan optimasi performa database."
+      },
+      {
+        id: 3,
+        title: "Front Office & Administrative Staff",
+        company: "Grand Medan Corporate Tower",
+        location: "Medan",
+        type: "Full-Time",
+        category: "Administrasi",
+        posted: "2 Hari Lalu",
+        rating: "4.8",
+        reviews: 98,
+        baseSalary: 4800000,
+        image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80",
+        summary: "Menangani penerimaan tamu VIP, korespondensi administrasi kantor, dan pengelolaan jadwal rapat direksi."
+      },
+      {
+        id: 4,
+        title: "Penetration Tester (Red Team Junior)",
+        company: "CyberGuard Asia",
+        location: "Bandung",
+        type: "Full-Time",
+        category: "Cybersecurity",
+        posted: "2 Hari Lalu",
+        rating: "5.0",
+        reviews: 84,
+        baseSalary: 8500000,
+        image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+        summary: "Pengujian penetrasi aplikasi web & API berbasis OWASP Top 10 serta penyusunan laporan rekomendasi."
+      },
+      {
+        id: 5,
+        title: "UI/UX & Frontend Designer",
+        company: "Kreatif Studio Indonesia",
+        location: "Remote",
+        type: "Remote",
+        category: "Remote",
+        posted: "3 Hari Lalu",
+        rating: "4.8",
+        reviews: 156,
+        baseSalary: 6500000,
+        image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80",
+        summary: "Merancang sistem desain antarmuka web modern di Figma dan mengonversinya menjadi kode Tailwind CSS."
+      },
+      {
+        id: 6,
+        title: "Staff Administrasi & Data Entry",
+        company: "PT Logistik Sumut Jaya",
+        location: "Medan",
+        type: "Magang",
+        category: "Administrasi",
+        posted: "4 Hari Lalu",
+        rating: "4.7",
+        reviews: 67,
+        baseSalary: 3500000,
+        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
+        summary: "Rekapitulasi data operasional harian, verifikasi dokumen pengiriman, dan pelaporan mingguan."
+      }
+    ];
+
+    let activeCategory = "Semua";
+
+    function formatRupiah(angka) {
+      return "Rp " + angka.toLocaleString("id-ID");
+    }
+
+    // Render Kartu Lowongan
+    function renderJobs(list) {
+      const grid = document.getElementById("jobGrid");
+      const empty = document.getElementById("emptyState");
+
+      if (list.length === 0) {
+        grid.innerHTML = "";
+        empty.classList.remove("hidden");
+        return;
+      }
+
+      empty.classList.add("hidden");
+      grid.innerHTML = list.map(job => `
+        <article class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition duration-300 flex flex-col">
+          <div class="relative h-52 overflow-hidden">
+            <img src="${job.image}" alt="${job.title}" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+            <div class="absolute top-3.5 left-3.5 flex gap-2">
+              <span class="bg-white/95 text-slate-800 text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">${job.category}</span>
+              <span class="bg-white/95 text-primary text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">${job.type}</span>
+            </div>
+            <span class="absolute bottom-3 right-3 bg-navy/80 backdrop-blur-sm text-white text-[11px] font-semibold px-3 py-1 rounded-full">
+              🕒 ${job.posted}
+            </span>
+          </div>
+
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="flex items-center justify-between text-xs font-semibold mb-2">
+              <span class="text-primary">📍 ${job.location} • ${job.company}</span>
+              <span class="text-amber-500 font-bold">★ ${job.rating} <span class="text-slate-400 font-normal">(${job.reviews})</span></span>
+            </div>
+
+            <h3 class="text-lg font-extrabold text-slate-900 leading-snug">${job.title}</h3>
+            <p class="mt-2 text-xs sm:text-sm text-slate-500 line-clamp-2 leading-relaxed">${job.summary}</p>
+
+            <div class="mt-auto pt-5 border-t border-slate-100 flex items-center justify-between gap-2">
+              <div>
+                <span class="block text-[11px] text-slate-400 font-medium">Gaji Pokok Mulai</span>
+                <span class="text-base font-extrabold text-slate-900">${formatRupiah(job.baseSalary)}</span>
+              </div>
+              <button onclick="openApplyModal(${job.id})" class="px-5 py-2.5 rounded-xl text-xs font-extrabold text-white bg-accent hover:bg-accent-hover shadow-md shadow-rose-500/20 transition cursor-pointer">
+                Lamar Sekarang
+              </button>
+            </div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    // Populate Select Dropdown di Modal
+    function populateModalDropdown() {
+      const select = document.getElementById("modalJobSelect");
+      select.innerHTML = jobsData.map(job => `
+        <option value="${job.id}">${job.title} — ${job.company} (${formatRupiah(job.baseSalary)}/bln)</option>
+      `).join("");
+    }
+
+    // Update Kalkulator Estimasi Gaji di Modal
+    function updateSalarySummary() {
+      const jobId = parseInt(document.getElementById("modalJobSelect").value, 10);
+      const expYears = Math.max(0, parseInt(document.getElementById("modalExperience").value || "0", 10));
+      const job = jobsData.find(j => j.id === jobId) || jobsData[0];
+
+      const bonus = expYears * 500000;
+      const total = job.baseSalary + bonus;
+
+      document.getElementById("summaryBaseSalary").textContent = formatRupiah(job.baseSalary);
+      document.getElementById("summaryExpYears").textContent = expYears;
+      document.getElementById("summaryExpBonus").textContent = "+ " + formatRupiah(bonus);
+      document.getElementById("summaryTotalSalary").textContent = formatRupiah(total);
+    }
+
+    // Buka Modal Form Lamaran (Reset ke Step 1)
+    function openApplyModal(jobId = 1) {
+      document.getElementById("applicationFormStep").classList.remove("hidden");
+      document.getElementById("applicationSuccessStep").classList.add("hidden");
+      document.getElementById("modalHeaderTitle").textContent = "Formulir Lamaran Instan";
+      document.getElementById("modalHeaderSubtitle").textContent = "Klik panah kiri untuk kembali memilih loker";
+
+      const nextWeek = new Date();
+      nextWeek.setDate(nextWeek.getDate() + 7);
+      document.getElementById("modalStartDate").value = nextWeek.toISOString().split("T")[0];
+
+      document.getElementById("modalJobSelect").value = jobId;
+      updateSalarySummary();
+      document.getElementById("applyModal").classList.remove("hidden");
+    }
+
+    function closeApplyModal() {
+      document.getElementById("applyModal").classList.add("hidden");
+    }
+
+    // Submit Form -> Ubah Modal ke Step 2 (Receipt Konfirmasi)
+    function handleApplicationSubmit(e) {
+      e.preventDefault();
+
+      const jobId = parseInt(document.getElementById("modalJobSelect").value, 10);
+      const job = jobsData.find(j => j.id === jobId);
+      const name = document.getElementById("modalApplicantName").value.trim();
+      const wa = document.getElementById("modalWhatsapp").value.trim();
+      const startDate = document.getElementById("modalStartDate").value;
+      const totalSalaryText = document.getElementById("summaryTotalSalary").textContent;
+      const ticketCode = "LK-" + Math.floor(10000 + Math.random() * 90000);
+
+      const saved = JSON.parse(localStorage.getItem("lokerkita_tickets") || "[]");
+      saved.unshift({
+        code: ticketCode,
+        name,
+        jobTitle: `${job.title} (${job.company})`,
+        date: startDate,
+        salary: totalSalaryText,
+        status: "Menunggu Review HRD"
+      });
+      localStorage.setItem("lokerkita_tickets", JSON.stringify(saved));
+
+      document.getElementById("receiptName").textContent = name;
+      document.getElementById("receiptCode").textContent = ticketCode;
+      document.getElementById("receiptJob").textContent = `${job.title} — ${job.company}`;
+      document.getElementById("receiptDate").textContent = startDate;
+      document.getElementById("receiptSalary").textContent = totalSalaryText;
+      document.getElementById("receiptWa").textContent = wa;
+
+      document.getElementById("applicationFormStep").classList.add("hidden");
+      document.getElementById("applicationSuccessStep").classList.remove("hidden");
+      document.getElementById("modalHeaderTitle").textContent = "Bukti Registrasi Kandidat";
+      document.getElementById("modalHeaderSubtitle").textContent = "Simpan kode tiket di bawah untuk pelacakan status";
+
+      e.target.reset();
+    }
+
+    // Buka Modal Cek Tiket
+    function openTrackModal() {
+      const container = document.getElementById("savedTicketsList");
+      const saved = JSON.parse(localStorage.getItem("lokerkita_tickets") || "[]");
+
+      if (saved.length === 0) {
+        container.innerHTML = `<div class="p-4 bg-slate-50 rounded-2xl text-xs text-slate-500 text-center">Belum ada riwayat lamaran tersimpan. Silakan lamar salah satu lowongan terlebih dahulu.</div>`;
+      } else {
+        container.innerHTML = saved.map(item => `
+          <div class="p-4 bg-slate-50 border border-slate-200/80 rounded-2xl text-xs space-y-1.5">
+            <div class="flex justify-between items-center">
+              <span class="font-extrabold text-primary">${item.code}</span>
+              <span class="bg-amber-100 text-amber-800 font-bold px-2.5 py-0.5 rounded-full text-[10px]">${item.status}</span>
+            </div>
+            <p class="font-bold text-slate-800">${item.jobTitle}</p>
+            <p class="text-slate-500">Pelamar: ${item.name} • Mulai: ${item.date}</p>
+          </div>
+        `).join("");
+      }
+
+      document.getElementById("trackModal").classList.remove("hidden");
+    }
+
+    // Filter & Search Logic
+    document.querySelectorAll(".filter-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".filter-btn").forEach(b => {
+          b.classList.remove("bg-primary", "text-white", "shadow-sm");
+          b.classList.add("bg-white", "text-slate-600", "border", "border-slate-200");
+        });
+        btn.classList.add("bg-primary", "text-white", "shadow-sm");
+        btn.classList.remove("bg-white", "text-slate-600", "border", "border-slate-200");
+
+        activeCategory = btn.dataset.cat;
+        applyAllFilters();
+      });
+    });
+
+    function applyAllFilters() {
+      const keyword = document.getElementById("searchKeyword").value.toLowerCase().trim();
+      const location = document.getElementById("searchLocation").value;
+      const type = document.getElementById("searchType").value;
+
+      const filtered = jobsData.filter(job => {
+        const matchCat = activeCategory === "Semua" || job.category === activeCategory || (activeCategory === "Remote" && job.type === "Remote");
+        const matchKeyword = !keyword || job.title.toLowerCase().includes(keyword) || job.company.toLowerCase().includes(keyword);
+        const matchLoc = location === "Semua" || job.location === location;
+        const matchType = type === "Semua" || job.type === type;
+        return matchCat && matchKeyword && matchLoc && matchType;
+      });
+
+      renderJobs(filtered);
+    }
+
+    function handleHeroSearch(e) {
+      e.preventDefault();
+      applyAllFilters();
+      document.getElementById("lowongan").scrollIntoView({ behavior: "smooth" });
+    }
+
+    function resetFilters() {
+      document.getElementById("searchKeyword").value = "";
+      document.getElementById("searchLocation").value = "Semua";
+      document.getElementById("searchType").value = "Semua";
+      document.querySelectorAll(".filter-btn")[0].click();
+    }
+
+    // Init
+    populateModalDropdown();
+    renderJobs(jobsData);
+  </script>
+</body>
+</html>
